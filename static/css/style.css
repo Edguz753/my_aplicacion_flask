@@ -1,0 +1,107 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea al inicio para ver el contenido si es largo */
+    min-height: 100vh;
+    padding-top: 20px; /* Espacio arriba */
+}
+
+.container {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#uploadForm {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#uploadForm label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#fileInput {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 4px;
+    width: 70%;
+    max-width: 400px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.feedback {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.feedback.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.feedback.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.chart-container {
+    margin: 20px auto; /* Centrar el contenedor del gráfico */
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+#columnList {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    text-align: left;
+    max-height: 150px; /* Para que no ocupe mucho espacio si hay muchas columnas */
+    overflow-y: auto; /* Scroll si es necesario */
+    border: 1px solid #eee;
+    padding: 10px;
+}
+
+#columnList li {
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+}
+#columnList li:last-child {
+    border-bottom: none;
+}

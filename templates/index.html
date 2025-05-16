@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de Datos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Cargar y Visualizar Datos</h1>
+        
+        <form id="uploadForm" enctype="multipart/form-data">
+            <label for="fileInput">Selecciona un archivo CSV:</label>
+            <input type="file" id="fileInput" name="file" accept=".csv" required>
+            <button type="submit">Cargar y Visualizar</button>
+        </form>
+
+        <div id="feedback" class="feedback"></div>
+
+        <div class="chart-container" style="position: relative; height:60vh; width:80vw; margin-top: 20px;">
+            <canvas id="myChart"></canvas>
+        </div>
+
+        <h2>Columnas del Dataset:</h2>
+        <ul id="columnList"></ul>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
